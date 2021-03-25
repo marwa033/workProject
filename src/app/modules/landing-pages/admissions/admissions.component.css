@@ -1,0 +1,6 @@
+/* TABLE STYLE */
+.admission div table thead tr th,
+.admission div table tbody tr td {
+  text-align: center;
+  font-size: 16px;
+}

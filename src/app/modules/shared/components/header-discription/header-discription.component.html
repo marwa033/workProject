@@ -1,0 +1,14 @@
+<section class="title-discription" *ngFor="let item of data">
+  <div class="img" data-aos="flip-down">
+    <img src="{{ item.img }}" alt="" />
+    <div class="title">
+      <h2>{{ item.primaryTitle }}</h2>
+    </div>
+  </div>
+  <div class="discription">
+    <h2 data-aos="zoom-in">{{ item.secondryTitle }}</h2>
+    <p data-aos="fade-up">
+      {{ item.discription }}
+    </p>
+  </div>
+</section>

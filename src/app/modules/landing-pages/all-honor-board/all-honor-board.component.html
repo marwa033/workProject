@@ -1,0 +1,101 @@
+<app-page-header title="لوحه الشرف"></app-page-header>
+
+<div class="container my-5">
+  
+  <!-- honor primary school -->
+  <h2 class="sections-header mt-5" data-aos="zoom-in">
+    <span>المرحلة الابتدائية</span>
+  </h2>
+  <div class="row">
+    <div
+      data-aos="fade-down"
+      class="col-12 col-sm-6 col-md-6 col-lg-4 my-2"
+      *ngFor="let obj of primarySchool | slice: (p - 1) * 6:p * 6"
+    >
+      <div class="card" style="height: 18rem">
+        <img src="{{ obj.image }}" alt="" />
+        <div class="descriptions">
+          <h1>{{ obj.title }}</h1>
+          <p>{{ obj.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <ngb-pagination
+    data-aos="fade-up"
+    class="d-flex justify-content-center"
+    [pageSize]="6"
+    [collectionSize]="primarySchool.length"
+    [(page)]="p"
+  >
+    <ng-template ngbPaginationPrevious class="prev">Prev</ng-template>
+    <ng-template ngbPaginationNext>Next</ng-template>
+  </ngb-pagination>
+</div>
+
+  <!-- honor middle school -->
+<div class="container my-5">
+  <h2 class="sections-header mt-5" data-aos="zoom-in">
+    <span>المرحلة المتوسطة</span>
+  </h2>
+  <div class="row">
+    <div
+      data-aos="fade-down"
+      class="col-12 col-sm-6 col-md-6 col-lg-4 my-2"
+      *ngFor="let obj of middleSchool | slice: (page3 - 1) * 6:page3 * 6"
+    >
+      <div class="card" style="height: 18rem">
+        <img src="{{ obj.image }}" alt="" />
+        <div class="descriptions">
+          <h1>{{ obj.title }}</h1>
+          <p>{{ obj.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <ngb-pagination
+    data-aos="fade-up"
+    class="d-flex justify-content-center"
+    [pageSize]="6"
+    [collectionSize]="middleSchool.length"
+    [(page)]="page3"
+  >
+    <ng-template ngbPaginationPrevious class="prev">Prev</ng-template>
+    <ng-template ngbPaginationNext>Next</ng-template>
+  </ngb-pagination>
+</div>
+
+  <!-- honor high school -->
+<div class="container my-5">
+  <h2 class="sections-header mt-5" data-aos="zoom-in">
+    <span>المرحلة الثانوية</span>
+  </h2>
+  <div class="row">
+    <div
+      data-aos="fade-down"
+      class="col-12 col-sm-6 col-md-6 col-lg-4 my-2"
+      *ngFor="let obj of highSchool | slice: (page3 - 1) * 6:page3 * 6"
+    >
+      <div class="card" style="height: 18rem">
+        <img src="{{ obj.image }}" alt="" />
+        <div class="descriptions">
+          <h1>{{ obj.title }}</h1>
+          <p>{{ obj.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <ngb-pagination
+    data-aos="fade-up"
+    class="d-flex justify-content-center"
+    [pageSize]="6"
+    [collectionSize]="highSchool.length"
+    [(page)]="page2"
+  >
+    <ng-template ngbPaginationPrevious class="prev">Prev</ng-template>
+    <ng-template ngbPaginationNext>Next</ng-template>
+  </ngb-pagination>
+</div>

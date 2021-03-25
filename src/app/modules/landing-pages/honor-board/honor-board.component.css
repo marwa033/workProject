@@ -1,0 +1,41 @@
+
+.articles {
+}
+.articles h2 {
+}
+.articles .article {
+}
+.articles .article > img {
+  float: right;
+  margin: 0 0 30px 20px;
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  shape-outside: circle();
+  box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.141);
+  transition: 0.4s;
+}
+@media (max-width: 600px) {
+  .articles .article > img {
+    float: unset;
+    margin: 0 auto 42px;
+    display: block;
+  }
+}
+.articles .article > img:hover {
+  shape-outside: inset(0px 0px 20px 0px);
+  border-radius: 0%;
+}
+.articles .article p {
+  white-space: pre-line;
+  line-height: 40px;
+  position: relative;
+  bottom: 13px;
+  text-align: justify;
+}
+
+/* swiper */
+

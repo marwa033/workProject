@@ -1,0 +1,96 @@
+<!-- <div class="split">
+  <div class="screen">
+    <div class="cardLogin cardLogin1" [class.white]="!isWhite">
+      <div class="imgBx"></div>
+      <div
+        (mouseenter)="toggleColor()"
+        (mouseleave)="toggleColor()"
+        class="card"
+        (click)="girlsSec()"
+      >
+        <div class="card-body bodyBoy">
+          <app-svg-logo [whiteSvgColor]="isWhite"></app-svg-logo>
+          <a class="btn btn2">مدارس المبداعين الاهلية للبنين</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen">
+    <div class="cardLogin cardLogin2" [class.white]="!isWhite">
+      <div class="imgBx"></div>
+      <div
+        (mouseenter)="toggleColor()"
+        (mouseleave)="toggleColor()"
+        class="card"
+        (click)="boysSec()"
+      >
+        <div class="card-body bodyGirl">
+          <app-svg-logo [whiteSvgColor]="isWhite"></app-svg-logo>
+          
+          <a class="btn btn1">مدارس المبدعات الاهلية للبنات</a>
+                </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="social" style="display:none">
+  <ul class="social-icons">
+    <li>
+      <a
+        class="facebook"
+        target="_blank"
+        href="https://www.facebook.com/%D9%85%D8%AF%D8%A7%D8%B1%D8%B3-%D8%B7%D9%84%D8%A7%D8%A6%D8%B9-%D8%A7%D9%84%D9%85%D8%A8%D8%AF%D8%B9%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-105137197583867/"
+        ><i class="fa fa-facebook"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        class="twitter"
+        href="https://twitter.com/talealmobden?s=11"
+        target="_blank"
+        ><i class="fa fa-twitter"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        class="snapchat"
+        target="_blank"
+        href="https://www.snapchat.com/add/talealmobden"
+        ><i class="fa fa-snapchat-ghost"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        class="instagram"
+        target="_blank"
+        href="https://www.instagram.com/talealmobden/"
+        ><i class="fa fa-instagram"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        class="youtube"
+        target="_blank"
+        href="https://www.youtube.com/channel/UCJIRChTJsmZtxuibe4DkgpQ"
+        ><i class="fa fa-youtube-play"></i
+      ></a>
+    </li>
+  </ul>
+</div> -->
+
+
+<div #container class="container" [ngClass]="{
+  'left' : leftIsHoverd,
+  'right' : rightIsHoverd
+}">
+  <div (mouseenter)="leftHover()" class="split left">
+    <!-- <app-svg-logo [whiteSvgColor]="isWhite"></app-svg-logo> -->
+    <a class="btn"
+    (click)="boysSec()">مدارس المبداعين الاهلية للبنين</a>
+  </div>
+  <div (mouseenter)="rightHover()" class="split right">
+    <!-- <app-svg-logo [whiteSvgColor]="isWhite"></app-svg-logo> -->
+    <a class="btn"
+    (click)="girlsSec()">مدارس المبدعات الاهلية للبنات</a>
+  </div>
+</div>

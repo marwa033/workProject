@@ -1,0 +1,280 @@
+<nav class="main-nav" [class.scrolled]="navIsScrolled">
+  <div class="right">
+    <app-svg-logo
+      [routerLink]="['']"
+      [whiteSvgColor]="whiteLogo"
+    ></app-svg-logo>
+  </div>
+  <div class="center">طلائع المبدعين للبنين</div>
+  <div class="left">
+    <div class="menu-button" (click)="openOverlayMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="overlay-menu" [class.opened]="overlayMenuIsOpen">
+  <div class="tiles" [class.animated]="animateTiles">
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+  </div>
+  <div
+    class="close-button"
+    (click)="closeOverlayMenu()"
+    [class.animated]="animateLinks"
+  >
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="links" [class.animated]="animateLinks" *ngIf="gradeNavId == 0">
+    <li>
+      <a href="javascript:0" (click)="closeOverlayMenu()" [routerLink]="['./']">
+        الرئيسية
+      </a>
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./admission']"
+      >
+        القبول و التسجيل</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./prizes']"
+      >
+        الجوائز</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./quality']"
+      >
+        الجوده الشامله
+      </a>
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./supervision']"
+      >
+        الاشراف و التطوير المهنى</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./public']"
+      >
+        العلاقات العامه</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./transportation']"
+      >
+        النقل المدرسى</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./allnews']"
+      >
+        الاخبار</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./contactUs']"
+      >
+        اتصل بنا</a
+      >
+    </li>
+  </ul>
+  <ul class="links" [class.animated]="animateLinks" *ngIf="gradeNavId > 0">
+    <li>
+      <a href="javascript:0" (click)="closeOverlayMenu(); changeFromParent()">
+        <i class="fa fa-home"></i>
+      </a>
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./grades/home']"
+      >
+        الرئسيه
+      </a>
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./grades/leadership']"
+      >
+        القيادة المدرسية</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./grades/guidance']"
+      >
+        الارشـاد الطــلابي</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./grades/activity']"
+      >
+        النشاط الطلابي</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./grades/source']"
+        >المصادر والمعامل</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./grades/schoolhw']"
+      >
+        الواجبات المنزلية</a
+      >
+    </li>
+  </ul>
+  <ul class="login-and-gander" [class.animated]="animateLinks">
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./login']"
+        >تسجيل الدخول</a
+      >
+    </li>
+    <li>
+      <a
+        href="javascript:0"
+        (click)="closeOverlayMenu()"
+        [routerLink]="['./girls']"
+      >
+        طلائع المبدعات للبنات</a
+      >
+    </li>
+  </ul>
+</div>
+
+<div class="routes-container">
+  <router-outlet></router-outlet>
+  <!-- <router-outlet (activate)='onActivate()'></router-outlet> -->
+</div>
+
+<footer class="site-footer" data-aos="fade-in">
+  <div
+    class="nectar-shape-divider-wrap"
+    style="height: 250px"
+    data-front=""
+    data-style="waves_opacity_alt"
+    data-position="top"
+  >
+    <svg
+      class="nectar-shape-divider"
+      fill=""
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1000 300"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"
+      ></path>
+      <path
+        d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"
+      ></path>
+      <path
+        d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"
+      ></path>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row footerRow">
+      <div
+        class="col-lg-6 d-flex align-items-end justify-content-center justify-content-lg-start text-center text-lg-right"
+      >
+        <p class="my-2">جميع الحقوق محفوظة لمدارس المبدعين والمبدعات 2021</p>
+      </div>
+
+      <div
+        class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-end text-center text-lg-left"
+      >
+        <ul class="social-icons">
+          <li>
+            <a
+              class="facebook"
+              target="_blank"
+              href="https://www.facebook.com/%D9%85%D8%AF%D8%A7%D8%B1%D8%B3-%D8%B7%D9%84%D8%A7%D8%A6%D8%B9-%D8%A7%D9%84%D9%85%D8%A8%D8%AF%D8%B9%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-105137197583867/"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="twitter"
+              href="https://twitter.com/talealmobden?s=11"
+              target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="snapchat"
+              target="_blank"
+              href="https://www.snapchat.com/add/talealmobden"
+              ><i class="fa fa-snapchat-ghost"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="instagram"
+              target="_blank"
+              href="https://www.instagram.com/talealmobden/"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="youtube"
+              target="_blank"
+              href="https://www.youtube.com/channel/UCJIRChTJsmZtxuibe4DkgpQ"
+              ><i class="fa fa-youtube-play"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+  </div>
+</footer>

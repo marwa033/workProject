@@ -1,0 +1,12 @@
+<div class="people-container">
+  <div class="person" *ngFor="let item of data">
+    <div class="img">
+      <img [src]="item.image" alt="..." data-aos="zoom-in" />
+    </div>
+    <div class="person-data">
+      <h4 data-aos="fade-right">{{ item.name }}</h4>
+      <h6 data-aos="fade-right" data-aos-delay="200">{{ item.title }}</h6>
+      <p data-aos="fade-right" data-aos-delay="400">{{ item.description }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<app-page-header title="معرض الصور"></app-page-header>
+
+<div class="gallery my-5">
+  <h2 class="sections-header mt-5" data-aos="zoom-in">
+    <span>معرض الصور</span>
+  </h2>
+  <div class="grid" gallerize>
+    <div class="grid__item" *ngFor="let image of fetchData">
+      <img [src]="image.image" data-aos="zoom-in" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,242 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap"); */
+@import "~swiper/swiper-bundle";
+html,
+body {
+  height: 100%;
+  font-family: "Almarai";
+  direction: rtl;
+  text-align: right;
+}
+
+.titleContainer {
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  width: 320px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.titleContainer p {
+  padding: 5px;
+  margin-top: 0.5em;
+  font-weight: 800;
+  font-size: 16px;
+  color: #ce2761;
+  text-align: center;
+}
+.pageTitle {
+  padding-top: 120px;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  /* animation: textanimation 2s ease-in-out; */
+}
+.pageAllTitle {
+  padding-top: 120px;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+@media (max-width: 650px) {
+  .pageTitle {
+    padding-top: 120px;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: -100px;
+  }
+  .pageAllTitle {
+    padding-top: 120px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .smallImage {
+    display: block;
+    margin-left: auto;
+    margin-top: 0em !important;
+    margin-right: auto;
+  }
+  .titleContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    border-radius: 50px;
+  }
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-header {
+  height: 300px;
+  width: 100%;
+  background: -webkit-linear-gradient(
+      rgba(29, 38, 113, 0.8),
+      rgba(195, 55, 100, 0.8)
+    ),
+    url("/assets/images/a.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+/* start of abdo code */
+/*
+  primary-color => #ba3a51
+  secondry-color => #58595b
+*/
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --z-distance: 8.519vw;
+  --from-left: 1;
+  --mobile-bkp: 650px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e2e2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #707070;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5070;
+}
+::-webkit-overflow-scrolling:touch {
+  background: #707070;
+  width: 5px;
+}
+
+/* general heading */
+.page-link {
+  color: #cf386d;
+}
+
+.page-link:hover {
+  color: #a12d56;
+}
+
+.page-item.active .page-link {
+  background-color: #cf386d;
+  border-color: #cf386d;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem #cf386d40;
+}
+
+.sections-header {
+  margin-bottom: 60px;
+  position: relative;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+}
+@media (max-width: 1000px) {
+  .sections-header {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .sections-header {
+    font-size: 30px;
+  }
+}
+.sections-header::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 75px;
+  height: 4px;
+  background-color: #e63170;
+}
+.sections-header::after {
+  content: "";
+}
+
+.general-button {
+  position: relative;
+  padding: 12px 35px;
+  border: 0;
+  background-color: #e63f5c;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.general-button::before {
+  content: "";
+  height: 140px;
+  width: 51px;
+  background-color: rgba(255, 255, 255, 0.129);
+  position: absolute;
+  top: -50px;
+  left: -30px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.general-button::after {
+  content: "";
+}
+
+.general-button:hover::before {
+  background-color: rgba(255, 255, 255, 0.281);
+  left: 230px;
+}
+
+.general-button:hover {
+  transform: scale(1.05);
+}
+
+.general-button i {
+  font-size: 22px;
+  margin-right: 4px;
+  position: relative;
+  top: 1px;
+}
+
+.table-responsive {
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead tr {
+  /* background-color: #585858; */
+  background-color: #ff5070;
+  color: #fff;
+}
+
+.table tbody tr td:first-of-type {
+  background-color: #f1f1f1;
+}
+/* end of abdo code */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,323 @@
+.page-custom-header {
+  /* background-position-y: 70%; */
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+@media (max-width: 600px) {
+  .page-custom-header {
+    height: 50vh;
+  }
+}
+.page-custom-header .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(29, 38, 113, 0.6),
+    rgba(195, 55, 120, 0.8)
+  );
+  /* background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgb(255, 64, 125)
+  ); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-custom-header .overlay.centerd {
+  justify-content: center;
+}
+.page-custom-header .overlay.centerd .title {
+  padding-right: 0 !important;
+}
+.page-custom-header .overlay.centerd .title h2 {
+  padding-right: 0 !important;
+}
+@media (max-width: 600px) {
+  .page-custom-header .overlay {
+    justify-content: center;
+  }
+}
+.page-custom-header .overlay .title {
+  padding-right: 80px;
+}
+@media (max-width: 1100px) {
+  .page-custom-header .overlay .title {
+    padding-right: 0;
+  }
+}
+.page-custom-header .overlay .responsable-data {
+  display: none;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .page-custom-header .overlay .responsable-data {
+    display: block;
+  }
+}
+.page-custom-header .overlay .responsable-data .user-btn {
+  border: 0;
+  margin-left: 8px;
+  margin-right: 15px;
+  position: relative;
+  bottom: 3px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #509eff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.349);
+}
+.page-custom-header .overlay .responsable-data .user-btn i {
+}
+.page-custom-header .overlay .responsable-data .data {
+  position: fixed;
+  right: 50%;
+  background-color: #fff;
+  z-index: 100;
+  padding: 45px 15px 10px 15px;
+  margin-top: 4px;
+  text-align: center;
+  border-radius: 3px;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  transition: 0.4s;
+}
+.page-custom-header .overlay .responsable-data .data.opened {
+  transform: translateY(0px) translateX(50%);
+  opacity: 1;
+  pointer-events: unset;
+}
+.page-custom-header .overlay .responsable-data .data .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: 0;
+  color: #ff002f;
+}
+.page-custom-header .overlay .responsable-data .data .close-btn i {
+}
+.page-custom-header .overlay .responsable-data .data .user-image {
+  margin-bottom: 12px;
+}
+.page-custom-header .overlay .responsable-data .data .user-image img {
+  max-width: 200px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.page-custom-header .overlay .responsable-data .data .user-image img:hover {
+  border-radius: 0%;
+}
+.page-custom-header .overlay .responsable-data .data .user-data {
+}
+.page-custom-header .overlay .responsable-data .data .user-data h6 {
+  color: #6e6e6e;
+}
+.page-custom-header .overlay .responsable-data .data .user-data .name {
+  font-size: 18px;
+  margin: 8px 0 12px 0px;
+}
+.page-custom-header .overlay .responsable-data .data .user-data .phone {
+  color: #5066ff;
+  border: 0;
+  background-color: #ededed;
+  padding: 5px 10px;
+  position: relative;
+}
+.page-custom-header
+  .overlay
+  .responsable-data
+  .data
+  .user-data
+  .phone.copied::after {
+  opacity: 1;
+}
+.page-custom-header .overlay .responsable-data .data .user-data .phone::after {
+  content: "تم النسخ";
+  background-color: #464646;
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  display: block;
+  right: 105%;
+  top: 5px;
+  width: 80px;
+  padding: 3px 2px 6px 3px;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: 0.2s;
+  opacity: 0;
+}
+.page-custom-header .overlay .responsable-data .data .user-data .phone i {
+}
+.page-custom-header .overlay .title h2 {
+  color: #fff;
+  font-size: 60px;
+  text-shadow: 0 0 1px black;
+}
+@media (max-width: 1100px) {
+  .page-custom-header .overlay .title h2 {
+    padding-right: 30px;
+    font-size: 45px;
+  }
+}
+@media (max-width: 600px) {
+  .page-custom-header .overlay .title h2 {
+    padding-right: 15px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 350px) {
+  .page-custom-header .overlay .title h2 {
+    font-size: 28px;
+  }
+}
+
+.page-custom-header .overlay > .user-data {
+  padding-left: 80px;
+  z-index: 10;
+}
+@media (max-width: 1100px) {
+  .page-custom-header .overlay > .user-data {
+    padding-left: 25px;
+  }
+}
+.page-custom-header .overlay > .user-data:hover .img {
+  background-color: #fff;
+  transform: translateY(0px);
+}
+.page-custom-header .overlay > .user-data:hover .img img {
+  border-radius: 0%;
+}
+.page-custom-header .overlay > .user-data:hover h6 {
+  transform: translateY(0px);
+  opacity: 1;
+  pointer-events: unset;
+}
+.page-custom-header .overlay > .user-data:hover .name {
+  transform: translateX(0px);
+  opacity: 1;
+  pointer-events: unset;
+}
+.page-custom-header .overlay > .user-data:hover .phone {
+  transform: translateX(0px);
+  opacity: 1;
+  pointer-events: unset;
+}
+.page-custom-header .overlay > .user-data .img {
+  text-align: center;
+  padding: 24px 10px;
+  background-color: transparent;
+  transition: 0.5s;
+  transform: translateY(52px);
+}
+.page-custom-header .overlay .user-data .img img {
+  max-width: 220px;
+  max-height: 220px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+@media (max-width: 1000px) {
+  .page-custom-header .overlay .user-data .img img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .page-custom-header .overlay .user-data .img img {
+    display: none;
+  }
+}
+
+.page-custom-header .overlay > .user-data h6 {
+  color: #6e6e6e;
+  margin: 12px 5px 12px 5px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+@media (max-width: 600px) {
+  .page-custom-header .overlay > .user-data {
+    display: none;
+  }
+}
+.page-custom-header .overlay > .user-data .name {
+  font-size: 18px;
+  margin: 8px 0 12px 0px;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.page-custom-header .overlay > .user-data .phone {
+  color: #5066ff;
+  border: 0;
+  background-color: #ededed;
+  padding: 5px 10px;
+  position: relative;
+  transform: translateX(10px);
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.page-custom-header .overlay .user-data .phone.copied::after {
+  opacity: 1;
+}
+.page-custom-header .overlay .user-data .phone::after {
+  content: "تم النسخ";
+  background-color: #464646;
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  display: block;
+  left: 105%;
+  top: 5px;
+  width: 80px;
+  padding: 3px 2px 6px 3px;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.page-custom-header .overlay .user-data .phone i {
+}
+.page-custom-header .overlay .svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 250px;
+}
+@media (max-width: 600px) {
+  .page-custom-header .overlay .svg {
+    display: none;
+  }
+}
+.page-custom-header .overlay .svg svg {
+  height: 100%;
+  width: 100%;
+}
+.page-custom-header .overlay .svg svg path:first-of-type {
+  fill: #fff;
+  opacity: 0.15;
+}
+.page-custom-header .overlay .svg svg path:nth-of-type(2) {
+  fill: #fff;
+  opacity: 0.3;
+}
+.page-custom-header .overlay .svg svg path:last-of-type {
+  fill: #fff;
+}

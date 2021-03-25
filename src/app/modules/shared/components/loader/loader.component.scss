@@ -1,0 +1,141 @@
+.loader_div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade_in 0.7s cubic-bezier(0, 0, 0.15, 1.04);
+}
+.loader_div .svg_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.502);
+}
+.loader_div .svg_container svg {
+  width: 250px;
+  animation: loading 4s ease infinite;
+}
+@media (max-width: 800px) {
+  .loader_div .svg_container svg {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .loader_div .svg_container svg {
+    width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .loader_div .svg_container svg {
+    width: 60%;
+  }
+}
+.loader_div .svg_container svg path,
+.loader_div .svg_container svg polygon {
+  // fill: transparent;
+  fill: #fff;
+  stroke-width: 3;
+  stroke-dasharray: 3490;
+  stroke-dashoffset: 3490;
+}
+.loader_div .svg_container svg path.primary_color,
+.loader_div .svg_container svg polygon.primary_color {
+  stroke: #ba3a51;
+  stroke: rgba(255, 255, 255, 0);
+  // animation: stroke_primary 8s ease-out infinite;
+}
+.loader_div .svg_container svg path.darker,
+.loader_div .svg_container svg polygon.darker {
+  stroke: #771025;
+  stroke: rgba(255, 255, 255, 0);
+  // animation: stroke_darker 8s ease-out infinite;
+}
+.loader_div .svg_container svg path.secondary_color,
+.loader_div .svg_container svg polygon.secondary_color {
+  stroke: #58595b;
+  stroke: rgba(255, 255, 255, 0);
+  // animation: stroke_secondary 8s ease-out infinite;
+}
+.loader_div .svg_container path.st3,
+.loader_div .svg_container polygon.st3 {
+  stroke: #58595b;
+  stroke: rgba(255, 255, 255, 0);
+  // animation: stroke_secondary 8s ease-out infinite;
+}
+
+@keyframes stroke_primary {
+  0% {
+    stroke-dashoffset: 3490;
+  }
+  50% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  60% {
+    fill: #ba3a51;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #ba3a51;
+  }
+}
+@keyframes stroke_secondary {
+  0% {
+    stroke-dashoffset: 3490;
+  }
+  50% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  60% {
+    fill: #58595b;
+  }
+  100% {
+    fill: #58595b;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke_darker {
+  0% {
+    stroke-dashoffset: 3490;
+  }
+  50% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  60% {
+    fill: #771025;
+  }
+  100% {
+    fill: #771025;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fade_in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

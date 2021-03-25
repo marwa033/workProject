@@ -1,0 +1,90 @@
+
+/* abdo code */
+
+.articles {
+}
+
+.articles .grid {
+  column-count: 3;
+  padding: 0 50px;
+}
+
+.articles .grid .grid__item {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 30px 90px rgb(0, 0, 0, 0.14);
+}
+
+.articles .grid .grid__item .img {
+  height: 250px;
+  overflow: hidden;
+}
+
+.articles .grid .grid__item .img img {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.articles .grid .grid__item .img img:hover {
+  transform: scale(1.1);
+}
+
+.articles .grid .grid__item .text {
+  padding: 15px;
+}
+.articles .grid .grid__item .text h5 {
+  margin: 10px 0;
+  color: #e33d77;
+  font-size: 16px;
+}
+.articles .grid .grid__item .text h4 {
+  margin: 20px 0;
+}
+.articles .grid .grid__item .text p {
+  font-size: 16px;
+}
+.articles .grid .grid__item .text .details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.articles .grid .grid__item .text .details .logo {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.251);
+}
+.articles .grid .grid__item .text .details .logo app-svg-logo {
+  width: 100%;
+}
+.articles .grid .grid__item .text .details .date {
+}
+.articles .grid .grid__item .text .details .date h5 {
+  margin: 0;
+}
+.articles .grid .grid__item .text .details .date span {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+  .articles .grid {
+    column-count: 2;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .articles .grid {
+    column-count: 1;
+  }
+}

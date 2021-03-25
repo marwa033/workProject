@@ -1,0 +1,31 @@
+<div class="prize">
+    <app-page-header
+      title="الجوائز"
+      responsableImg="../../../../../assets/images/pages/regist.jpg"
+      responsableName="محمد داوود علي"
+      responsableMobile="0500453532"
+      position="مسؤول الجوائز"
+    ></app-page-header>
+<!-- PRIZES CONTAINER -->
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div
+          class="col my-3"
+          *ngFor="let obj of fetchData; let i = index"
+          data-aos="zoom-in"
+          [attr.data-aos-delay]="i * 300"
+        >
+          <div class="cardBx card">
+            <input type="checkbox" name="" />
+            <div class="toggle">+</div>
+            <div class="imgBx">
+              <img src="{{ obj.imge }}" alt="" />
+            </div>
+            <div class="details">
+              <p>{{ obj.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

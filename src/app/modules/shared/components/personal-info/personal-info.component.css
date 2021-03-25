@@ -1,0 +1,95 @@
+.people-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .people-container {
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 800px) {
+  .people-container {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 700px) {
+  .people-container {
+    padding: 0 5%;
+  }
+}
+
+.people-container .person {
+  height: 190px;
+  width: 50%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .people-container .person {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .people-container .person {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: unset;
+    text-align: center;
+  }
+}
+
+.people-container .person .img {
+  width: 170px;
+}
+
+@media (max-width: 600px) {
+  .people-container .person .img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.people-container .person .img img {
+  min-height: 190px;
+  max-height: 190px;
+  min-width: 170px;
+  max-width: 170px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.141);
+}
+
+.people-container .person .person-data {
+  padding: 0 20px;
+  width: calc(100% - 170px);
+}
+
+@media (max-width: 600px) {
+  .people-container .person .person-data {
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+.people-container .person .person-data h4 {
+  font-size: 18px;
+}
+
+.people-container .person .person-data h6 {
+  font-size: 16px;
+  color: #0072ff;
+  margin-bottom: 30px;
+}
+
+.people-container .person .person-data p {
+  font-size: 14px;
+  margin: 0;
+}

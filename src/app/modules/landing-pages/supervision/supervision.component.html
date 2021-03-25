@@ -1,0 +1,25 @@
+
+<div class="supervision">
+  <app-page-header
+    title="الإشراف والتطوير المهني"
+    responsableImg="../../../../../assets/images/supervision/main.jpg"
+    responsableName="محمد داوود علي"
+    responsableMobile="0500453532"
+    position="مسؤول الإشراف والتطوير "
+  ></app-page-header>
+  <!--  -->
+
+  <!-- header-discription component -->
+  <div class="container-fluid mt-5">
+    <app-header-discription [data]="data"></app-header-discription>
+  </div>
+
+  
+  <!-- team component -->
+  <h2 class="sections-header mt-5" data-aos="flip-down">
+    <span>إجراءات التسجيل للطلاب المستجدين</span>
+  </h2>
+  <div class="container-fluid">
+    <app-personal-info [data]="teamData"></app-personal-info>
+  </div>
+</div>

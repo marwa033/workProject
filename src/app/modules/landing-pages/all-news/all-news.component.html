@@ -1,0 +1,36 @@
+<app-page-header title="جميع الاخبار"></app-page-header>
+
+<div class="articles my-5">
+  <!-- all news -->
+  <h2 class="sections-header mt-5" data-aos="zoom-in">
+    <span>جميع الاخبار</span>
+  </h2>
+  <div class="grid">
+    <div
+      class="grid__item"
+      [routerLink]="['../news/1']"
+      data-aos="zoom-out"
+      *ngFor="let item of fetchData"
+    >
+      <div class="img">
+        <img [src]="item.image" />
+      </div>
+      <div class="text">
+        <h5>المرحلة المتوسطة</h5>
+        <h4>{{ item.title }}</h4>
+        <p>
+          {{ item.description }}
+        </p>
+        <div class="details">
+          <div class="logo">
+            <app-svg-logo></app-svg-logo>
+          </div>
+          <div class="date">
+            <h5>محمد العنزي</h5>
+            <span>1/1/2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

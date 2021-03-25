@@ -1,0 +1,42 @@
+<app-page-header
+  title="جميع المقالات"
+  responsableImg="../../../../../assets/images/pages/regist.jpg"
+  responsableName="محمد داوود علي"
+  responsableMobile="0500453532"
+  position="مسؤول اتصل بنا  "
+></app-page-header>
+
+  <!-- all articles -->
+<div class="articles my-5"> <h2 class="sections-header mt-5" data-aos="zoom-in">
+    <span>جميع المقالات</span>
+  </h2>
+  <div class="grid">
+    <div
+      class="grid__item"
+      [routerLink]="['../article/1']"
+      data-aos="zoom-out"
+      *ngFor="let item of fetchData"
+    >
+      <div class="img">
+        <img [src]="item.image" />
+      </div>
+      <div class="text">
+        <h5>المرحلة المتوسطة</h5>
+        <h4>{{ item.title }}</h4>
+        <p>
+          {{ item.description }}
+        </p>
+        <div class="details">
+          <div class="logo">
+            <app-svg-logo></app-svg-logo>
+          </div>
+          <div class="date">
+            <h5>محمد العنزي</h5>
+            <span>1/1/2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
